@@ -6,41 +6,42 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Главная | Девайс | HTML Academy</title>
 		<link rel="stylesheet" href="./styles/styles.min.css">
+
 		<link rel="icon" href="./favicon.ico" sizes="any">
-		<link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+		<link rel="icon" href="./favicons/favicon.png" type="image/png" sizes="32x32">
 	</head>
 
 	<body>
 		<header class="page-header container">
 			<div class="header-wrapper">
-				<a class="logo header-logo focus-outline" href="./index.html" aria-current="page">
+				<a class="logo page-header-logo focus-outline" href="./index.html" aria-current="page" aria-label="Главная">
 					<img class="logo-image" src="./images/header-logo.svg" width="145" height="36" alt="Логотип интернет-магазина «Device».">
 				</a>
 
 				<div class="user-menu">
-					<form class="site-search-form" action="https://echo.htmlacademy.ru/" method="get">
+					<form class="site-search-form" action="https://echo.htmlacademy.ru/" method="get" autocomplete="off">
 						<label class="site-search-label">
-							<span class="visually-hidden">Поиск по сайту:</span>
-							<input class="site-search-field text-small" type="search" name="site-search" placeholder="Поиск по сайту" autocomplete="off" required>
+							<span class="visually-hidden">Поиск по сайту</span>
+							<input class="site-search-field text-small" type="search" name="site-search" placeholder="Поиск по сайту" required>
 						</label>
 						<button class="site-search-button text-small normalize-button" type="submit">Найти</button>
 					</form>
 
-					<div class="user-login">
-						<a class="user-menu-button login-button interactive-element" href="javascript:void(0)">
+					<div class="user-auth">
+						<a class="login-button user-menu-button interactive-element" href="javascript:void(0)">
 							Войти
 						</a>
 					</div>
 
-					<ul class="user-products reset-list">
-						<li class="user-products-item compare-item">
-							<a class="user-menu-button compare-button interactive-element" href="javascript:void(0)">
+					<ul class="user-navigation reset-list">
+						<li class="user-navigation-item user-navigation-compare">
+							<a class="compare-button user-menu-button interactive-element" href="javascript:void(0)">
 								Сравнить
 							</a>
 						</li>
 
-						<li class="user-products-item cart-item">
-							<a class="user-menu-button cart-button interactive-element" href="javascript:void(0)">
+						<li class="user-navigation-item user-navigation-cart">
+							<a class="cart-button user-menu-button interactive-element" href="javascript:void(0)">
 								Корзина
 								<span class="cart-counter flex-center">2</span>
 							</a>
@@ -93,9 +94,9 @@
 
 				<nav class="main-navigation">
 					<div class="catalog-navigation">
-						<button class="catalog-navigation-toggler text-subtitle normalize-button focus-outline" type="button">
-							<span class="toggler-text">Каталог товаров</span>
-							<span class="toggler-icon flex-center"></span>
+						<button class="catalog-toggle text-subtitle normalize-button focus-outline" type="button">
+							<span class="catalog-toggle-text">Каталог товаров</span>
+							<span class="catalog-toggle-icon flex-center"></span>
 						</button>
 
 						<!-- Для выделения текущей страницы - добавить ссылке aria-current="page" -->
@@ -158,14 +159,14 @@
 		<main class="main-index main-container">
 			<h1 class="visually-hidden">Интернет-магазин гаджетов «Девайс»</h1>
 
-			<section class="main-slider page-section container">
+			<section class="main-slider container page-section">
 				<h2 class="visually-hidden">Лучшие предложения нашего интернет-магазина</h2>
 
-				<!-- Для выбора слайда - добавляется класс "slider-card-selected" -->
+				<!-- Для переключения слайдов - слайду добавить класс "is-active" -->
 
 				<ul class="slider-cards reset-list">
-					<li class="slider-card slider-card-selected">
-						<img class="slider-image" src="./images/slider-product-1.png" width="560" height="560" alt="Квадрокоптер, стреляющий лазером.">
+					<li class="slider-card is-active">
+						<img class="slider-image" src="./images/slider-quadcopter.png" width="560" height="560" alt="Квадрокоптер, стреляющий лазером.">
 
 						<div class="slider-info">
 							<h3 class="slider-title page-title">Порхает как бабочка, жалит как пчела!</h3>
@@ -173,23 +174,23 @@
 								Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
 							</p>
 							<div class="slider-link-wrapper button-yellow-wrapper">
-								<a class="slider-link text-subtitle button-yellow" href="javascript:void(0)">Подробнее</a>
+								<a class="slider-link button-yellow text-subtitle" href="javascript:void(0)">Подробнее</a>
 							</div>
 							<dl class="slider-features">
 								<div class="slider-feature">
-									<dt class="feature-title">Дальность полета</dt>
-									<dd class="feature-description">800 м</dd>
+									<dt class="slider-feature-title">Дальность полета</dt>
+									<dd class="slider-feature-description">800 м</dd>
 								</div>
 								<div class="slider-feature">
-									<dt class="feature-title">Радиус поражения</dt>
-									<dd class="feature-description">50 м</dd>
+									<dt class="slider-feature-title">Радиус поражения</dt>
+									<dd class="slider-feature-description">50 м</dd>
 								</div>
 							</dl>
 						</div>
 					</li>
 
 					<li class="slider-card">
-						<img class="slider-image" src="./images/slider-product-2.png" width="560" height="560" alt="Мотивирующий фитнес-браслет.">
+						<img class="slider-image" src="./images/slider-fitness-bracelet.png" width="560" height="560" alt="Мотивирующий фитнес-браслет.">
 
 						<div class="slider-info">
 							<h3 class="slider-title page-title">Худеем<br>правильно!</h3>
@@ -197,19 +198,19 @@
 								Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
 							</p>
 							<div class="slider-link-wrapper button-yellow-wrapper">
-								<a class="slider-link text-subtitle button-yellow" href="javascript:void(0)">Подробнее</a>
+								<a class="slider-link button-yellow text-subtitle" href="javascript:void(0)">Подробнее</a>
 							</div>
 							<dl class="slider-features">
 								<div class="slider-feature">
-									<dt class="feature-title">Без подзарядки</dt>
-									<dd class="feature-description">48 часов</dd>
+									<dt class="slider-feature-title">Без подзарядки</dt>
+									<dd class="slider-feature-description">48 часов</dd>
 								</div>
 							</dl>
 						</div>
 					</li>
 
 					<li class="slider-card">
-						<img class="slider-image" src="./images/slider-product-3.png" width="560" height="560" alt="Самая длинная селфи-палка.">
+						<img class="slider-image" src="./images/slider-selfie-stick.png" width="560" height="560" alt="Самая длинная селфи-палка.">
 
 						<div class="slider-info">
 							<h3 class="slider-title page-title">Делай селфи,<br>как Бен Стиллер! </h3>
@@ -217,20 +218,20 @@
 								Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
 							</p>
 							<div class="slider-link-wrapper button-yellow-wrapper">
-								<a class="slider-link text-subtitle button-yellow" href="javascript:void(0)">Подробнее</a>
+								<a class="slider-link button-yellow text-subtitle" href="javascript:void(0)">Подробнее</a>
 							</div>
-							<dl class="slider-features slider-features-wide">
+							<dl class="slider-features slider-features-big-gaps">
 								<div class="slider-feature">
-									<dt class="feature-title">Длина палки</dt>
-									<dd class="feature-description">8,5 м</dd>
+									<dt class="slider-feature-title">Длина палки</dt>
+									<dd class="slider-feature-description">8,5 м</dd>
 								</div>
 								<div class="slider-feature">
-									<dt class="feature-title">Вес палки</dt>
-									<dd class="feature-description">5 кг</dd>
+									<dt class="slider-feature-title">Вес палки</dt>
+									<dd class="slider-feature-description">5 кг</dd>
 								</div>
 								<div class="slider-feature">
-									<dt class="feature-title">Материал</dt>
-									<dd class="feature-description">Карбон</dd>
+									<dt class="slider-feature-title">Материал</dt>
+									<dd class="slider-feature-description">Карбон</dd>
 								</div>
 							</dl>
 						</div>
@@ -238,15 +239,15 @@
 				</ul>
 
 				<div class="slider-controls">
-					<button class="slider-button slider-button-prev normalize-button interactive-element" type="button">
+					<button class="slider-button slider-prev normalize-button interactive-element" type="button">
 						<span class="visually-hidden">Предыдущий слайд</span>
 					</button>
-					<button class="slider-button slider-button-next normalize-button interactive-element" type="button">
+					<button class="slider-button slider-next normalize-button interactive-element" type="button">
 						<span class="visually-hidden">Следующий слайд</span>
 					</button>
 				</div>
 
-				<!-- Для переключения номеров слайдов - переключается класс "is-current" -->
+				<!-- Для переключения номеров слайдов - кнопке добавить класс "is-current" -->
 
 				<div class="slider-pagination">
 					<button class="slider-pagination-button is-current normalize-button focus-outline" type="button">
@@ -261,38 +262,38 @@
 				</div>
 			</section>
 
-			<section class="catalog-categories page-section container">
+			<section class="index-catalog container page-section">
 				<h2 class="visually-hidden">Каталог товаров</h2>
 
-				<ul class="categories-cards reset-list">
-					<li class="categories-card">
-						<a class="categories-link categories-virtual focus-outline" href="javascript:void(0)">
-							<h3 class="categories-title page-title">Виртуальная реальность</h3>
+				<ul class="index-catalog-cards reset-list">
+					<li class="index-catalog-card">
+						<a class="index-catalog-link index-catalog-virtual focus-outline" href="javascript:void(0)">
+							<h3 class="index-catalog-title page-title">Виртуальная реальность</h3>
 						</a>
 					</li>
-					<li class="categories-card">
-						<a class="categories-link categories-monopods focus-outline" href="./catalog.html">
-							<h3 class="categories-title page-title">Моноподы для&nbsp;селфи</h3>
+					<li class="index-catalog-card">
+						<a class="index-catalog-link index-catalog-monopods focus-outline" href="./catalog.html">
+							<h3 class="index-catalog-title page-title">Моноподы для&nbsp;селфи</h3>
 						</a>
 					</li>
-					<li class="categories-card">
-						<a class="categories-link categories-cameras focus-outline" href="javascript:void(0)">
-							<h3 class="categories-title page-title">Экшн-камеры</h3>
+					<li class="index-catalog-card">
+						<a class="index-catalog-link index-catalog-cameras focus-outline" href="javascript:void(0)">
+							<h3 class="index-catalog-title page-title">Экшн-камеры</h3>
 						</a>
 					</li>
-					<li class="categories-card">
-						<a class="categories-link categories-bracelets focus-outline" href="javascript:void(0)">
-							<h3 class="categories-title page-title">Фитнес-браслеты</h3>
+					<li class="index-catalog-card">
+						<a class="index-catalog-link index-catalog-bracelets focus-outline" href="javascript:void(0)">
+							<h3 class="index-catalog-title page-title">Фитнес-браслеты</h3>
 						</a>
 					</li>
-					<li class="categories-card">
-						<a class="categories-link categories-watches focus-outline" href="javascript:void(0)">
-							<h3 class="categories-title page-title">Умные часы</h3>
+					<li class="index-catalog-card">
+						<a class="index-catalog-link index-catalog-watches focus-outline" href="javascript:void(0)">
+							<h3 class="index-catalog-title page-title">Умные часы</h3>
 						</a>
 					</li>
-					<li class="categories-card">
-						<a class="categories-link categories-quadcopters focus-outline" href="javascript:void(0)">
-							<h3 class="categories-title page-title">Квадрокоптеры</h3>
+					<li class="index-catalog-card">
+						<a class="index-catalog-link index-catalog-quadcopters focus-outline" href="javascript:void(0)">
+							<h3 class="index-catalog-title page-title">Квадрокоптеры</h3>
 						</a>
 					</li>
 				</ul>
@@ -302,51 +303,45 @@
 				<div class="services-wrapper container">
 					<h2 class="visually-hidden">Наши услуги</h2>
 
-					<!-- Для выбора вкладки - добавить кнопке класс "services-tab-selected" и удалить класс "button-yellow" -->
+					<!-- Для переключения вкладок - кнопке добавить класс "is-current" и удалить класс "button-yellow" -->
 
-					<ul class="services-list reset-list">
-						<li class="services-item">
-							<button class="services-tab services-tab-selected text-subtitle normalize-button" type="button">
-								<span class="services-tab-text">Доставка</span>
-							</button>
-						</li>
-						<li class="services-item">
-							<button class="services-tab button-yellow text-subtitle normalize-button" type="button">
-								<span class="services-tab-text">Гарантия</span>
-							</button>
-						</li>
-						<li class="services-item">
-							<button class="services-tab button-yellow text-subtitle normalize-button" type="button">
-								<span class="services-tab-text">Кредит</span>
-							</button>
-						</li>
-					</ul>
+					<div class="services-controls">
+						<button class="services-button is-current text-subtitle normalize-button" type="button">
+							<span class="services-button-text">Доставка</span>
+						</button>
+						<button class="services-button button-yellow text-subtitle normalize-button" type="button">
+							<span class="services-button-text">Гарантия</span>
+						</button>
+						<button class="services-button button-yellow text-subtitle normalize-button" type="button">
+							<span class="services-button-text">Кредит</span>
+						</button>
+					</div>
 
-					<!-- Для показа выбранной вкладки - используется класс "services-card-selected" -->
+					<!-- Для переключения вкладок - вкладке добавить класс "is-active" -->
 
-					<ul class="services-cards reset-list">
-						<li class="services-card services-delivery services-card-selected">
+					<ul class="services-tabs reset-list">
+						<li class="services-tab services-delivery is-active">
 							<div class="services-info">
 								<h3 class="services-title page-title">Доставка</h3>
-								<p class="reset-paragraph">
+								<p class="services-description reset-paragraph">
 									Мы с удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! Ведь мы&nbsp;неплохо заработаем, поднимая его на ваш этаж.
 								</p>
 							</div>
 						</li>
 
-						<li class="services-card services-warranty">
+						<li class="services-tab services-warranty">
 							<div class="services-info">
 								<h3 class="services-title page-title">Гарантия</h3>
-								<p class="reset-paragraph">
+								<p class="services-description reset-paragraph">
 									Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
 								</p>
 							</div>
 						</li>
 
-						<li class="services-card services-credit">
+						<li class="services-tab services-credit">
 							<div class="services-info">
 								<h3 class="services-title page-title">Кредит</h3>
-								<p class="reset-paragraph">
+								<p class="services-description reset-paragraph">
 									Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.
 								</p>
 							</div>
@@ -355,7 +350,7 @@
 				</div>
 			</section>
 
-			<section class="on-order page-section container">
+			<section class="on-order container page-section">
 				<h2 class="visually-hidden">Доставка под заказ</h2>
 
 				<a class="on-order-button focus-outline" href="javascript:void(0)">
@@ -364,7 +359,7 @@
 				</a>
 			</section>
 
-			<div class="company-info page-section container">
+			<div class="company-info container page-section">
 				<section class="about">
 					<h2 class="company-info-title page-title">О нас</h2>
 

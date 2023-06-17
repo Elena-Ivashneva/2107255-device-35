@@ -6,42 +6,43 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Моноподы для селфи | Девайс | HTML Academy</title>
 		<link rel="stylesheet" href="./styles/styles.min.css">
+
 		<link rel="icon" href="./favicon.ico" sizes="any">
-		<link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+		<link rel="icon" href="./favicons/favicon.png" type="image/png" sizes="32x32">
 	</head>
 
 	<body>
 		<header class="page-header container">
 			<div class="header-wrapper header-wrapper-inner">
-				<a class="logo header-logo focus-outline" href="./index.html">
+				<a class="logo page-header-logo focus-outline" href="./index.html">
 					<img class="logo-image" src="./images/header-logo.svg" width="145" height="36" alt="Логотип интернет-магазина «Device».">
 				</a>
 
 				<div class="user-menu">
-					<form class="site-search-form" action="https://echo.htmlacademy.ru/" method="get">
+					<form class="site-search-form" action="https://echo.htmlacademy.ru/" method="get" autocomplete="off">
 						<label class="site-search-label">
-							<span class="visually-hidden">Поиск по сайту:</span>
-							<input class="site-search-field text-small" type="search" name="site-search" placeholder="Поиск по сайту" autocomplete="off" required>
+							<span class="visually-hidden">Поиск по сайту</span>
+							<input class="site-search-field text-small" type="search" name="site-search" placeholder="Поиск по сайту" required>
 						</label>
 						<button class="site-search-button text-small normalize-button" type="submit">Найти</button>
 					</form>
 
-					<div class="user-login">
-						<a class="user-menu-button login-button interactive-element" href="javascript:void(0)">
+					<div class="user-auth">
+						<a class="login-button user-menu-button interactive-element" href="javascript:void(0)">
 							Коля Петухов
 						</a>
 						<a class="log-ut-button focus-outline" href="javascript:void(0)">Выйти</a>
 					</div>
 
-					<ul class="user-products reset-list">
-						<li class="user-products-item compare-item">
-							<a class="user-menu-button compare-button interactive-element" href="javascript:void(0)">
+					<ul class="user-navigation reset-list">
+						<li class="user-navigation-item user-navigation-compare">
+							<a class="compare-button user-menu-button interactive-element" href="javascript:void(0)">
 								Сравнить
 							</a>
 						</li>
 
-						<li class="user-products-item cart-item">
-							<a class="user-menu-button cart-button interactive-element" href="javascript:void(0)">
+						<li class="user-navigation-item user-navigation-cart">
+							<a class="cart-button user-menu-button interactive-element" href="javascript:void(0)">
 								Корзина
 								<span class="cart-counter flex-center">2</span>
 							</a>
@@ -94,9 +95,9 @@
 
 				<nav class="main-navigation">
 					<div class="catalog-navigation">
-						<button class="catalog-navigation-toggler text-subtitle normalize-button focus-outline" type="button">
-							<span class="toggler-text">Каталог товаров</span>
-							<span class="toggler-icon flex-center"></span>
+						<button class="catalog-toggle text-subtitle normalize-button focus-outline" type="button">
+							<span class="catalog-toggle-text">Каталог товаров</span>
+							<span class="catalog-toggle-icon flex-center"></span>
 						</button>
 
 						<!-- Для выделения текущей страницы нужно добавить ссылке aria-current="page" -->
