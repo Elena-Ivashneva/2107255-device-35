@@ -13,8 +13,8 @@
 
 	<body>
 		<header class="page-header container">
-			<div class="header-wrapper header-wrapper-inner">
-				<a class="logo page-header-logo focus-outline" href="./index.html">
+			<div class="page-header-wrapper page-header-inner">
+				<a class="page-header-logo logo focus-outline" href="./index.html" aria-label="Главная">
 					<img class="logo-image" src="./images/header-logo.svg" width="145" height="36" alt="Логотип интернет-магазина «Device».">
 				</a>
 
@@ -93,6 +93,8 @@
 					</ul>
 				</div>
 
+				<!-- Для выделения текущей страницы - ссылке добавить класс "is-current" и удалить класс "interactive-element" -->
+
 				<nav class="main-navigation">
 					<div class="catalog-navigation">
 						<button class="catalog-toggle text-subtitle normalize-button focus-outline" type="button">
@@ -100,57 +102,37 @@
 							<span class="catalog-toggle-icon flex-center"></span>
 						</button>
 
-						<!-- Для выделения текущей страницы нужно добавить ссылке aria-current="page" -->
-
 						<ul class="catalog-navigation-list reset-list">
 							<li class="catalog-navigation-item">
-								<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">
-									Виртуальная реальность
-								</a>
+								<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">Виртуальная реальность</a>
 							</li>
 							<li class="catalog-navigation-item">
-								<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">
-									Фитнес-браслеты
-								</a>
+								<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">Фитнес-браслеты</a>
 							</li>
 							<li class="catalog-navigation-item">
-								<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">
-									Квадрокоптеры
-								</a>
+								<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">Квадрокоптеры</a>
 							</li>
 							<li class="catalog-navigation-item">
-								<a class="catalog-navigation-link interactive-element" href="./catalog.html" aria-current="page">
-									Моноподы для cелфи
-								</a>
+								<span class="catalog-navigation-link is-current">Моноподы для cелфи</span>
 							</li>
 							<li class="catalog-navigation-item">
-								<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">
-									Умные часы
-								</a>
+								<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">Умные часы</a>
 							</li>
 							<li class="catalog-navigation-item">
-								<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">
-									Экшн-камеры
-								</a>
+								<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">Экшн-камеры</a>
 							</li>
 						</ul>
 					</div>
 
 					<ul class="site-navigation reset-list">
 						<li class="site-navigation-item">
-							<a class="site-navigation-link text-subtitle interactive-element" href="javascript:void(0)">
-								Доставка
-							</a>
+							<a class="site-navigation-link text-subtitle interactive-element" href="javascript:void(0)">Доставка</a>
 						</li>
 						<li class="site-navigation-item">
-							<a class="site-navigation-link text-subtitle interactive-element" href="javascript:void(0)">
-								Гарантия
-							</a>
+							<a class="site-navigation-link text-subtitle interactive-element" href="javascript:void(0)">Гарантия</a>
 						</li>
 						<li class="site-navigation-item">
-							<a class="site-navigation-link text-subtitle interactive-element" href="javascript:void(0)">
-								Контакты
-							</a>
+							<a class="site-navigation-link text-subtitle interactive-element" href="javascript:void(0)">Контакты</a>
 						</li>
 					</ul>
 				</nav>
@@ -401,37 +383,35 @@
 		</main>
 
 		<footer class="page-footer">
-			<div class="footer-wrapper container">
-				<div class="footer-left-column">
-					<a class="footer-logo logo focus-outline" href="./index.html">
+			<div class="page-footer-wrapper container">
+				<div class="page-footer-left">
+					<a class="page-footer-logo logo focus-outline" href="./index.html" aria-label="Главная">
 						<img class="logo-image" src="./images/footer-logo.svg" width="145" height="36" alt="Логотип интернет-магазина «Device».">
 					</a>
 
-					<address class="footer-address text-small">
-						<p class="reset-paragraph">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+					<address class="page-footer-address text-small">
+						<p class="page-footer-address-text reset-paragraph">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
 					</address>
 				</div>
 
-				<div class="footer-center-column">
-					<nav class="footer-navigation">
-						<ul class="footer-navigation-list reset-list">
-							<li class="footer-navigation-item">
-								<a class="footer-navigation-link text-subtitle footer-link focus-outline" href="javascript:void(0)">
-									Доставка
-								</a>
-							</li>
-							<li class="footer-navigation-item">
-								<a class="footer-navigation-link text-subtitle footer-link focus-outline" href="javascript:void(0)">
-									Гарантия
-								</a>
-							</li>
-							<li class="footer-navigation-item">
-								<a class="footer-navigation-link text-subtitle footer-link focus-outline" href="javascript:void(0)">
-									Контакты
-								</a>
-							</li>
-						</ul>
-					</nav>
+				<div class="page-footer-center">
+					<ul class="footer-navigation reset-list">
+						<li class="footer-navigation-item">
+							<a class="footer-navigation-link page-footer-link text-subtitle focus-outline" href="javascript:void(0)">
+								Доставка
+							</a>
+						</li>
+						<li class="footer-navigation-item">
+							<a class="footer-navigation-link page-footer-link text-subtitle focus-outline" href="javascript:void(0)">
+								Гарантия
+							</a>
+						</li>
+						<li class="footer-navigation-item">
+							<a class="footer-navigation-link page-footer-link text-subtitle focus-outline" href="javascript:void(0)">
+								Контакты
+							</a>
+						</li>
+					</ul>
 
 					<ul class="footer-social reset-list">
 						<li class="footer-social-item">
@@ -452,16 +432,17 @@
 					</ul>
 				</div>
 
-				<div class="footer-right-column">
-					<address class="footer-address text-small">
-						<a class="footer-phone footer-link focus-outline" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+				<div class="page-footer-right">
+					<address class="page-footer-address text-small">
+						<a class="page-footer-phone page-footer-link focus-outline" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
 					</address>
 
-					<a class="footer-developer focus-outline" href="https://htmlacademy.ru/" target="_blank">
-						<span class="visually-hidden">Разработчик сайта — HTML Academy</span>
+					<a class="page-footer-developer focus-outline" href="https://htmlacademy.ru/" target="_blank">
+						<span class="visually-hidden">Разработчик дизайна сайта — HTML Academy</span>
 					</a>
 				</div>
 			</div>
 		</footer>
+
 	</body>
 </html>

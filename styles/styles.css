@@ -231,13 +231,13 @@ img {
 	background-color: #ffe17f;
 }
 
-.header-wrapper {
+.page-header-wrapper {
 	width: 1050px;
 	margin: -20px auto 0;
 	padding-left: 5px;
 }
 
-.header-wrapper-inner {
+.page-header-inner {
 	margin-bottom: 20px;
 }
 
@@ -741,7 +741,7 @@ img {
 	color: #000000;
 }
 
-.catalog-navigation-link[aria-current="page"]::after {
+.catalog-navigation-link.is-current::after {
 	position: absolute;
 	left: 3px;
 	bottom: 1px;
@@ -771,7 +771,7 @@ img {
 	padding: 10px 0 9px 5px;
 }
 
-.site-navigation-link[aria-current="page"]::after {
+.site-navigation-link.is-current::after {
 	position: absolute;
 	left: 5px;
 	bottom: 3px;
@@ -796,11 +796,11 @@ img {
 	background-color: #444444;
 }
 
-.footer-wrapper {
+.page-footer-wrapper {
 	display: flex;
 }
 
-.footer-left-column {
+.page-footer-left {
 	position: relative;
 
 	width: 243px;
@@ -808,7 +808,7 @@ img {
 	padding-bottom: 71px;
 }
 
-.footer-left-column::after {
+.page-footer-left::after {
 	position: absolute;
 	bottom: 0;
 	left: 1px;
@@ -821,14 +821,14 @@ img {
 	content: "";
 }
 
-.footer-center-column {
+.page-footer-center {
 	display: grid;
 	align-content: start;
 	max-width: 453px;
 	margin-top: 65px;
 }
 
-.footer-right-column {
+.page-footer-right {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
@@ -836,22 +836,19 @@ img {
 	margin: 78px 0 4px auto;
 }
 
-.footer-logo {
+.page-footer-logo {
 	margin: 0 0 35px 1px;
 }
 
-.footer-address {
+.page-footer-address {
 	font-style: normal;
 	color: inherit;
 }
 
 .footer-navigation {
-	margin-bottom: 47px;
-}
-
-.footer-navigation-list {
 	display: flex;
 	flex-wrap: wrap;
+	margin-bottom: 47px;
 }
 
 .footer-navigation-item {
@@ -862,7 +859,7 @@ img {
 	margin-right: 0;
 }
 
-.footer-link {
+.page-footer-link {
 	text-decoration: none;
 	color: inherit;
 
@@ -982,33 +979,33 @@ img {
 	}
 }
 
-.footer-right-column > :nth-last-child(2) {
+.page-footer-right > :nth-last-child(2) {
 	margin-bottom: 63px;
 }
 
-.footer-phone {
+.page-footer-phone {
 	display: block;
 	width: 175px;
 
 	text-decoration: underline;
 }
 
-.footer-link:hover {
+.page-footer-link:hover {
 	color: #ffc700;
 }
 
-.footer-link:active {
+.page-footer-link:active {
 	color: #ffc700;
 	opacity: 0.3;
 }
 
-.footer-developer {
+.page-footer-developer {
 	width: 115px;
 	height: 33px;
 	margin-top: auto;
 }
 
-.footer-developer::before {
+.page-footer-developer::before {
 	display: block;
 	height: 100%;
 
@@ -1020,11 +1017,11 @@ img {
 	content: "";
 }
 
-.footer-developer:hover::before {
+.page-footer-developer:hover::before {
 	background-color: #ffffff;
 }
 
-.footer-developer:active::before {
+.page-footer-developer:active::before {
 	background-color: #ffffff;
 	opacity: 0.3;
 }
@@ -1569,7 +1566,7 @@ img {
 	transition: opacity 150ms ease-out;
 }
 
-.on-order-text {
+.on-order-button-text {
 	grid-column: 2 / 3;
 	padding: 41px 57px 36px 61px;
 
@@ -1587,7 +1584,7 @@ img {
 	content: "";
 }
 
-.on-order-icon {
+.on-order-button-icon {
 	align-self: center;
 	justify-self: center;
 	width: 40px;
@@ -1599,7 +1596,7 @@ img {
 	content: "";
 }
 
-.on-order-icon::before {
+.on-order-button-icon::before {
 	width: 2px;
 	height: 12px;
 
@@ -1616,8 +1613,8 @@ img {
 	background-color: #ffc700;
 }
 
-.on-order-button:hover .on-order-icon::before,
-.on-order-button:active .on-order-icon::before {
+.on-order-button:hover .on-order-button-icon::before,
+.on-order-button:active .on-order-button-icon::before {
 	opacity: 1;
 }
 
@@ -1667,18 +1664,18 @@ img {
 	width: 520px;
 }
 
-.about-transport-list {
+.about-delivery-list {
 	width: 450px;
 }
 
-.about-transport-item {
+.about-delivery-item {
 	position: relative;
 
 	margin: 0 0 19px 2px;
 	padding-left: 34px;
 }
 
-.about-transport-item::before {
+.about-delivery-item::before {
 	position: absolute;
 	top: 6px;
 	left: 0;
@@ -1692,7 +1689,7 @@ img {
 	content: "";
 }
 
-.about-transport-item:last-child {
+.about-delivery-item:last-child {
 	margin-bottom: 0;
 }
 
@@ -1750,7 +1747,7 @@ img {
 	margin: 10px 0 0;
 }
 
-.subscription-form-container {
+.subscription-form-wrapper {
 	display: grid;
 	grid-template-columns: 1fr 210px;
 	column-gap: 138px;
@@ -1762,7 +1759,7 @@ img {
 	display: flex;
 }
 
-.subscription-field-label {
+.subscription-label {
 	flex-grow: 1;
 }
 
@@ -1788,7 +1785,7 @@ img {
 	background-color: #dcdcdc;
 }
 
-.subscription-field-error {
+.subscription-field.has-error {
 	border-bottom-color: #ff3d3d;
 }
 
@@ -1818,12 +1815,12 @@ img {
 	border-color: #000000;
 }
 
-.subscription-form-remark {
+.subscription-remark {
 	display: flex;
 	justify-self: end;
 }
 
-.subscription-form-remark::before {
+.subscription-remark::before {
 	flex-shrink: 0;
 	width: 16px;
 	height: 16px;
