@@ -5,6 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Главная | Девайс | HTML Academy</title>
+		<meta name="description" content="Интернет-магазин гаджетов «Девайс».">
 		<link rel="stylesheet" href="./styles/styles.min.css">
 
 		<link rel="icon" href="./favicon.ico" sizes="any">
@@ -13,129 +14,121 @@
 
 	<body>
 		<header class="page-header container">
-			<div class="page-header-wrapper">
-				<a class="page-header-logo logo focus-outline" href="./index.html" aria-current="page" aria-label="Главная">
-					<img class="logo-image" src="./images/header-logo.svg" width="145" height="36" alt="Логотип интернет-магазина «Device».">
-				</a>
+			<a class="page-header-logo logo focus-outline" href="./index.html" aria-current="page" aria-label="Главная">
+				<img class="logo-image" src="./images/header-logo.svg" width="145" height="36" alt="Логотип интернет-магазина «Device».">
+			</a>
 
-				<div class="user-menu">
-					<form class="site-search-form" action="https://echo.htmlacademy.ru/" method="get" autocomplete="off">
-						<label class="site-search-label">
-							<span class="visually-hidden">Поиск по сайту</span>
-							<input class="site-search-field text-small" type="search" name="site-search" placeholder="Поиск по сайту" required>
-						</label>
-						<button class="site-search-button text-small normalize-button" type="submit">Найти</button>
-					</form>
+			<div class="user-menu">
+				<form class="site-search-form" action="https://echo.htmlacademy.ru/" method="get" autocomplete="off">
+					<label class="site-search-label">
+						<span class="visually-hidden">Поиск по сайту</span>
+						<input class="site-search-field text-small" type="search" name="site-search" placeholder="Поиск по сайту" required>
+					</label>
+					<button class="site-search-button text-small normalize-button" type="submit">Найти</button>
+				</form>
 
+				<div class="user-navigation">
 					<div class="user-auth">
-						<a class="login-button user-menu-button interactive-element" href="javascript:void(0)">
-							Войти
-						</a>
+						<a class="user-button login-button interactive-element" href="javascript:void(0)">Войти</a>
 					</div>
 
-					<ul class="user-navigation reset-list">
-						<li class="user-navigation-item user-navigation-compare">
-							<a class="compare-button user-menu-button interactive-element" href="javascript:void(0)">
-								Сравнить
-							</a>
-						</li>
+					<a class="user-button compare-button interactive-element" href="javascript:void(0)">Сравнить</a>
 
-						<li class="user-navigation-item user-navigation-cart">
-							<a class="cart-button user-menu-button interactive-element" href="javascript:void(0)">
-								Корзина
-								<span class="cart-counter flex-center">2</span>
-							</a>
+					<div class="user-cart">
+						<a class="user-button cart-button interactive-element" href="javascript:void(0)">
+							Корзина
+							<span class="cart-counter flex-center">2</span>
+						</a>
 
-							<div class="cart-popover text-small">
-								<h2 class="visually-hidden">Корзина</h2>
+						<div class="cart-popover text-small">
+							<h2 class="visually-hidden">Корзина</h2>
 
-								<ul class="cart-product-list reset-list">
-									<li class="cart-product-item">
-										<a class="cart-product-link interactive-element" href="javascript:void(0)">
-											<h3 class="cart-product-title text-small">Любительская<br>селфи-палка</h3>
-											<img class="cart-product-image" src="./images/cart-popover-product-1.jpg" width="39" height="43" alt="Черная палка для селфи с простым горизонтальным держателем.">
-										</a>
-										<button class="cart-product-remove normalize-button interactive-element" type="button">
-											<span class="visually-hidden">Удалить из корзины</span>
-										</button>
-									</li>
-
-									<li class="cart-product-item">
-										<a class="cart-product-link interactive-element" href="javascript:void(0)">
-											<h3 class="cart-product-title text-small">Профессиональная<br>селфи-палка</h3>
-											<img class="cart-product-image" src="./images/cart-popover-product-2.jpg" width="39" height="43" alt="Черная палка для селфи со складным универсальным держателем.">
-										</a>
-										<button class="cart-product-remove normalize-button interactive-element" type="button">
-											<span class="visually-hidden">Удалить из корзины</span>
-										</button>
-									</li>
-								</ul>
-
-								<dl class="cart-order-info">
-									<div class="order-info-item order-info-number">
-										<dt class="order-info-title">Товаров:&nbsp;</dt>
-										<dd class="order-info-description">2</dd>
-									</div>
-									<div class="order-info-item order-info-price">
-										<dt class="order-info-title">Сумма:&nbsp;</dt>
-										<dd class="order-info-description">2000 ₽</dd>
-									</div>
-								</dl>
-
-								<div class="cart-popover-button-container">
-									<a class="cart-popover-button text-subtitle flex-center focus-outline" href="javascript:void(0)">
-										Открыть корзину
+							<ul class="cart-product-list reset-list">
+								<li class="cart-product-item">
+									<a class="cart-product-link interactive-element" href="javascript:void(0)">
+										<h3 class="cart-product-title text-small">Любительская<br>селфи-палка</h3>
+										<img class="cart-product-image" src="./images/cart-popover-product-1.jpg" width="39" height="43" alt="Черная палка для селфи с простым горизонтальным держателем.">
 									</a>
+									<button class="cart-product-remove normalize-button interactive-element" type="button">
+										<span class="visually-hidden">Удалить из корзины</span>
+									</button>
+								</li>
+
+								<li class="cart-product-item">
+									<a class="cart-product-link interactive-element" href="javascript:void(0)">
+										<h3 class="cart-product-title text-small">Профессиональная<br>селфи-палка</h3>
+										<img class="cart-product-image" src="./images/cart-popover-product-2.jpg" width="39" height="43" alt="Черная палка для селфи со складным универсальным держателем.">
+									</a>
+									<button class="cart-product-remove normalize-button interactive-element" type="button">
+										<span class="visually-hidden">Удалить из корзины</span>
+									</button>
+								</li>
+							</ul>
+
+							<dl class="cart-order-info">
+								<div class="order-info-item order-info-number">
+									<dt class="order-info-title">Товаров:&nbsp;</dt>
+									<dd class="order-info-description">2</dd>
 								</div>
+								<div class="order-info-item order-info-price">
+									<dt class="order-info-title">Сумма:&nbsp;</dt>
+									<dd class="order-info-description">2000 ₽</dd>
+								</div>
+							</dl>
+
+							<div class="cart-popover-button-container">
+								<a class="cart-popover-button text-subtitle flex-center focus-outline" href="javascript:void(0)">
+									Открыть корзину
+								</a>
 							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Для выделения текущей страницы - ссылке добавить класс "is-current" и удалить класс "interactive-element" -->
+
+			<nav class="main-navigation">
+				<div class="catalog-navigation">
+					<button class="catalog-toggle text-subtitle normalize-button focus-outline" type="button">
+						<span class="catalog-toggle-text">Каталог товаров</span>
+						<span class="catalog-toggle-icon flex-center"></span>
+					</button>
+
+					<ul class="catalog-navigation-list reset-list">
+						<li class="catalog-navigation-item">
+							<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">Виртуальная реальность</a>
+						</li>
+						<li class="catalog-navigation-item">
+							<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">Фитнес-браслеты</a>
+						</li>
+						<li class="catalog-navigation-item">
+							<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">Квадрокоптеры</a>
+						</li>
+						<li class="catalog-navigation-item">
+							<a class="catalog-navigation-link interactive-element" href="./catalog.html">Моноподы для cелфи</a>
+						</li>
+						<li class="catalog-navigation-item">
+							<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">Умные часы</a>
+						</li>
+						<li class="catalog-navigation-item">
+							<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">Экшн-камеры</a>
 						</li>
 					</ul>
 				</div>
 
-				<!-- Для выделения текущей страницы - ссылке добавить класс "is-current" и удалить класс "interactive-element" -->
-
-				<nav class="main-navigation">
-					<div class="catalog-navigation">
-						<button class="catalog-toggle text-subtitle normalize-button focus-outline" type="button">
-							<span class="catalog-toggle-text">Каталог товаров</span>
-							<span class="catalog-toggle-icon flex-center"></span>
-						</button>
-
-						<ul class="catalog-navigation-list reset-list">
-							<li class="catalog-navigation-item">
-								<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">Виртуальная реальность</a>
-							</li>
-							<li class="catalog-navigation-item">
-								<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">Фитнес-браслеты</a>
-							</li>
-							<li class="catalog-navigation-item">
-								<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">Квадрокоптеры</a>
-							</li>
-							<li class="catalog-navigation-item">
-								<a class="catalog-navigation-link interactive-element" href="./catalog.html">Моноподы для cелфи</a>
-							</li>
-							<li class="catalog-navigation-item">
-								<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">Умные часы</a>
-							</li>
-							<li class="catalog-navigation-item">
-								<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">Экшн-камеры</a>
-							</li>
-						</ul>
-					</div>
-
-					<ul class="site-navigation reset-list">
-						<li class="site-navigation-item">
-							<a class="site-navigation-link text-subtitle interactive-element" href="javascript:void(0)">Доставка</a>
-						</li>
-						<li class="site-navigation-item">
-							<a class="site-navigation-link text-subtitle interactive-element" href="javascript:void(0)">Гарантия</a>
-						</li>
-						<li class="site-navigation-item">
-							<a class="site-navigation-link text-subtitle interactive-element" href="javascript:void(0)">Контакты</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
+				<ul class="site-navigation reset-list">
+					<li class="site-navigation-item">
+						<a class="site-navigation-link text-subtitle interactive-element" href="javascript:void(0)">Доставка</a>
+					</li>
+					<li class="site-navigation-item">
+						<a class="site-navigation-link text-subtitle interactive-element" href="javascript:void(0)">Гарантия</a>
+					</li>
+					<li class="site-navigation-item">
+						<a class="site-navigation-link text-subtitle interactive-element" href="javascript:void(0)">Контакты</a>
+					</li>
+				</ul>
+			</nav>
 		</header>
 
 		<main class="main-index main-container">
@@ -374,7 +367,7 @@
 						<a class="contacts-phone interactive-element" href="tel:+78128121212">+7 (812) 812-12-12</a>
 					</address>
 					<h3 class="company-info-subtitle">Время работы</h3>
-					<ul class="contacts-schedule-list company-info-row-gap reset-list">
+					<ul class="contacts-schedule company-info-row-gap reset-list">
 						<li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
 						<li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
 					</ul>
@@ -387,7 +380,7 @@
 
 			<section class="subscription">
 				<div class="subscription-wrapper container">
-					<div class="subscription-info">
+					<div class="subscription-info-container">
 						<h2 class="subscription-title page-title">Подпишитесь на&nbsp;рассылку</h2>
 						<p class="subscription-description">
 							Еженедельный дайджест с обзорами новинок,<br>
@@ -397,13 +390,13 @@
 
 					<!-- Для показа ошибки - полю формы добавить класс "has-error" -->
 
-					<div class="subscription-form-wrapper">
+					<div class="subscription-form-container">
 						<form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
 							<label class="subscription-label">
 								<span class="visually-hidden">Введите ваш e-mail</span>
 								<input class="subscription-field normalize-input" type="email" name="subscription-email" placeholder="Ваш e-mail" required>
 							</label>
-							<button class="subscription-button button text-subtitle normalize-button focus-outline" type="submit">
+							<button class="subscription-button text-subtitle normalize-button focus-outline" type="submit">
 								Подписаться
 							</button>
 						</form>
