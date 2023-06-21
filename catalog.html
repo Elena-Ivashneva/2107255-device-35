@@ -78,7 +78,7 @@
 							</dl>
 
 							<div class="cart-popover-button-container">
-								<a class="cart-popover-button text-subtitle flex-center focus-outline" href="javascript:void(0)">
+								<a class="cart-popover-button subtitle flex-center focus-outline" href="javascript:void(0)">
 									Открыть корзину
 								</a>
 							</div>
@@ -91,7 +91,7 @@
 
 			<nav class="main-navigation">
 				<div class="catalog-navigation">
-					<button class="catalog-toggle text-subtitle normalize-button focus-outline" type="button">
+					<button class="catalog-toggle subtitle normalize-button focus-outline" type="button">
 						<span class="catalog-toggle-text">Каталог товаров</span>
 						<span class="catalog-toggle-icon flex-center"></span>
 					</button>
@@ -120,13 +120,13 @@
 
 				<ul class="site-navigation reset-list">
 					<li class="site-navigation-item">
-						<a class="site-navigation-link text-subtitle interactive-element" href="javascript:void(0)">Доставка</a>
+						<a class="site-navigation-link subtitle interactive-element" href="javascript:void(0)">Доставка</a>
 					</li>
 					<li class="site-navigation-item">
-						<a class="site-navigation-link text-subtitle interactive-element" href="javascript:void(0)">Гарантия</a>
+						<a class="site-navigation-link subtitle interactive-element" href="javascript:void(0)">Гарантия</a>
 					</li>
 					<li class="site-navigation-item">
-						<a class="site-navigation-link text-subtitle interactive-element" href="javascript:void(0)">Контакты</a>
+						<a class="site-navigation-link subtitle interactive-element" href="javascript:void(0)">Контакты</a>
 					</li>
 				</ul>
 			</nav>
@@ -134,39 +134,33 @@
 
 		<main class="main-inner main-container">
 			<header class="inner-header container">
-				<h1 class="inner-title page-title">Моноподы для селфи</h1>
+				<h1 class="inner-title main-title">Моноподы для селфи</h1>
 
 				<ul class="breadcrumbs text-small reset-list">
 					<li class="breadcrumbs-item">
-						<a class="breadcrumbs-link interactive-element" href="./index.html">
-							Главная
-						</a>
+						<a class="breadcrumbs-link interactive-element" href="./index.html">Главная</a>
 					</li>
 					<li class="breadcrumbs-item">
-						<a class="breadcrumbs-link interactive-element" href="javascript:void(0)">
-							Каталог товаров
-						</a>
+						<a class="breadcrumbs-link interactive-element" href="javascript:void(0)">Каталог товаров</a>
 					</li>
 					<li class="breadcrumbs-item">
-						<a class="breadcrumbs-link interactive-element" href="./catalog.html" aria-current="page">
-							Моноподы для селфи
-						</a>
+						<span class="breadcrumbs-link">Моноподы для селфи</span>
 					</li>
 				</ul>
 			</header>
 
 			<section class="catalog">
 				<div class="catalog-wrapper container">
-					<h2 class="visually-hidden">Товары в категории «Моноподы для селфи»</h2>
+					<h2 class="visually-hidden">Список товаров с фильтрами</h2>
 
 					<section class="catalog-filter">
-						<h3 class="catalog-filter-title catalog-subtitle page-subtitle">Фильтр:</h3>
+						<h3 class="catalog-filter-title catalog-subtitle subtitle">Фильтр:</h3>
 
 						<form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
-							<fieldset class="filter-group range-slider-group">
-								<legend class="filter-group-title range-slider-title text-bold">Стоимость</legend>
+							<fieldset class="filter-group">
+								<legend class="filter-title filter-range-title text-bold">Стоимость</legend>
 
-								<div class="filter-range-slider">
+								<div class="filter-range">
 									<div class="range-scale">
 										<div class="range-bar">
 											<div class="range-price range-price-min">
@@ -193,7 +187,7 @@
 							</fieldset>
 
 							<fieldset class="filter-group">
-								<legend class="filter-group-title text-bold">Цвет</legend>
+								<legend class="filter-title text-bold">Цвет</legend>
 
 								<ul class="filter-list text-small reset-list">
 									<li class="filter-item filter-checkbox">
@@ -235,7 +229,7 @@
 							</fieldset>
 
 							<fieldset class="filter-group">
-								<legend class="filter-group-title text-bold">Bluetooth</legend>
+								<legend class="filter-title text-bold">Bluetooth</legend>
 
 								<ul class="filter-list text-small reset-list">
 									<li class="filter-item filter-radio">
@@ -256,18 +250,16 @@
 							</fieldset>
 
 							<div class="button-yellow-wrapper">
-								<button class="filter-button button-yellow text-subtitle normalize-button" type="submit">
-									Показать
-								</button>
+								<button class="filter-button button-yellow subtitle normalize-button" type="submit">Показать</button>
 							</div>
 						</form>
 					</section>
 
-					<div class="catalog-results">
+					<div class="catalog-result">
 						<section class="catalog-sorting">
-							<h3 class="catalog-sorting-title catalog-subtitle page-subtitle">Сортировка:</h3>
+							<h3 class="catalog-sorting-title catalog-subtitle subtitle">Сортировка:</h3>
 
-							<select class="sorting-select interactive-element" name="catalog-sorting" aria-label="Сортировка">
+							<select class="sorting-select interactive-element" name="catalog-sorting" aria-label="Сортировать">
 								<option value="popular">Популярные</option>
 								<option value="new">Новинки</option>
 								<option value="price">По цене</option>
@@ -276,98 +268,100 @@
 
 							<div class="sorting-order">
 								<a class="sorting-order-button sorting-order-up flex-center focus-outline" href="javascript:void(0)">
-									<span class="visually-hidden">Сортировка по возрастанию</span>
+									<span class="visually-hidden">Сортировать по возрастанию</span>
 								</a>
 								<a class="sorting-order-button sorting-order-down flex-center focus-outline" href="javascript:void(0)">
-									<span class="visually-hidden">Сортировка по убыванию</span>
+									<span class="visually-hidden">Сортировать по убыванию</span>
 								</a>
 							</div>
 						</section>
 
 						<section class="catalog-products">
-							<h3 class="visually-hidden">Список товаров</h3>
+							<h3 class="visually-hidden">Товары</h3>
 
-							<!-- Для добавления метки «NEW» товару - ссылке добавить класс "products-new" -->
+							<!-- Для добавления метки «NEW» товару - добавить ему класс "product-new" -->
 
-							<ul class="products-cards reset-list">
-								<li class="products-card">
-									<a class="products-link focus-outline" href="javascript:void(0)">
-										<div class="products-image-container flex-center">
-											<img src="./images/catalog-product-1.jpg" width="360" height="380" alt="Черная селфи-палка с горизонтальным держателем.">
+							<ul class="catalog-product-cards reset-list">
+								<li class="product-card">
+									<a class="product-link focus-outline" href="javascript:void(0)">
+										<div class="product-image-wrapper flex-center">
+											<img class="product-image" src="./images/catalog/amateur-selfie-stick.jpg" width="360" height="380" alt="Простая черная селфи-палка с горизонтальным держателем.">
 										</div>
-										<div class="products-info-container">
-											<h4 class="products-title text-bold">Любительская<br>селфи-палка</h4>
-											<span class="products-price">500 ₽</span>
+										<div class="product-info">
+											<h4 class="product-title text-bold">Любительская<br>селфи-палка</h4>
+											<span class="product-price">500 ₽</span>
 										</div>
-										<span class="products-more text-subtitle button-yellow">Подробнее</span>
+										<span class="product-more button-yellow subtitle">Подробнее</span>
 									</a>
 								</li>
-								<li class="products-card">
-									<a class="products-link focus-outline" href="javascript:void(0)">
-										<div class="products-image-container flex-center">
-											<img src="./images/catalog-product-2.jpg" width="360" height="380" alt="Черная селфи-палка со складным универсальным держателем.">
+
+								<li class="product-card">
+									<a class="product-link focus-outline" href="javascript:void(0)">
+										<div class="product-image-wrapper flex-center">
+											<img class="product-image" src="./images/catalog/professional-selfie-stick.jpg" width="360" height="380" alt="Черная селфи-палка со складным универсальным держателем.">
 										</div>
-										<div class="products-info-container">
-											<h4 class="products-title text-bold">Профессиональная селфи-палка</h4>
-											<span class="products-price">1 500 ₽</span>
+										<div class="product-info">
+											<h4 class="product-title text-bold">Профессиональная селфи-палка</h4>
+											<span class="product-price">1 500 ₽</span>
 										</div>
-										<span class="products-more text-subtitle button-yellow">Подробнее</span>
+										<span class="product-more button-yellow subtitle">Подробнее</span>
 									</a>
 								</li>
-								<li class="products-card">
-									<a class="products-link focus-outline" href="javascript:void(0)">
-										<div class="products-image-container flex-center">
-											<img src="./images/catalog-product-3.jpg" width="360" height="380" alt="Селфи-палка в виде флешки-поплавка.">
+
+								<li class="product-card">
+									<a class="product-link focus-outline" href="javascript:void(0)">
+										<div class="product-image-wrapper flex-center">
+											<img class="product-image" src="./images/catalog/unsinkable-selfie-stick.jpg" width="360" height="380" alt="Селфи-палка в виде флешки-поплавка.">
 										</div>
-										<div class="products-info-container">
-											<h4 class="products-title text-bold">Непотопляемая<br>селфи-палка</h4>
-											<span class="products-price">2 500 ₽</span>
+										<div class="product-info">
+											<h4 class="product-title text-bold">Непотопляемая<br>селфи-палка</h4>
+											<span class="product-price">2 500 ₽</span>
 										</div>
-										<span class="products-more text-subtitle button-yellow">Подробнее</span>
+										<span class="product-more button-yellow subtitle">Подробнее</span>
 									</a>
 								</li>
-								<li class="products-card">
-									<a class="products-link focus-outline" href="javascript:void(0)">
-										<div class="products-image-container flex-center">
-											<img src="./images/catalog-product-4.jpg" width="360" height="380" alt="Селфи-палка в виде руки.">
+
+								<li class="product-card">
+									<a class="product-link focus-outline" href="javascript:void(0)">
+										<div class="product-image-wrapper flex-center">
+											<img class="product-image" src="./images/catalog/selfie-stick-hand.jpg" width="360" height="380" alt="Селфи-палка в виде руки.">
 										</div>
-										<div class="products-info-container">
-											<h4 class="products-title text-bold">Селфи-палка «Следуй за&nbsp;мной»</h4>
-											<span class="products-price">1 500 ₽</span>
+										<div class="product-info">
+											<h4 class="product-title text-bold">Селфи-палка «Следуй за&nbsp;мной»</h4>
+											<span class="product-price">1 500 ₽</span>
 										</div>
-										<span class="products-more text-subtitle button-yellow">Подробнее</span>
+										<span class="product-more button-yellow subtitle">Подробнее</span>
 									</a>
 								</li>
 							</ul>
 
-							<button class="catalog-show-more text-subtitle button focus-outline" type="button">
-								Загрузить ещё
-							</button>
+							<button class="catalog-show-more button subtitle focus-outline" type="button">Загрузить ещё</button>
+
+							<!-- Для выключения кнопок "Вперёд-Назад" - кнопке добавить класс "is-disabled" и удалить класс "focus-outline" -->
+							<!-- Для выделения текущей страницы - ссылке добавить класс "is-current" и удалить класс "focus-outline" -->
 
 							<div class="catalog-pagination">
-								<a class="pagination-button pagination-backward text-subtitle focus-outline">
-									Назад
-								</a>
+								<span class="pagination-button pagination-backward is-disabled subtitle">Назад</span>
+
 								<ul class="pagination-list reset-list">
 									<li class="pagination-item">
-										<a class="pagination-number text-small focus-outline" href="javascript:void(0)" aria-current="page">1</a>
+										<span class="pagination-link is-current text-small">1</span>
 									</li>
 									<li class="pagination-item">
-										<a class="pagination-number text-small focus-outline" href="javascript:void(0)">2</a>
+										<a class="pagination-link text-small focus-outline" href="javascript:void(0)">2</a>
 									</li>
 									<li class="pagination-item">
-										<a class="pagination-number text-small focus-outline" href="javascript:void(0)">3</a>
+										<a class="pagination-link text-small focus-outline" href="javascript:void(0)">3</a>
 									</li>
 									<li class="pagination-item">
 										<span class="pagination-divider text-small">...</span>
 									</li>
 									<li class="pagination-item">
-										<a class="pagination-number text-small focus-outline" href="javascript:void(0)">15</a>
+										<a class="pagination-link text-small focus-outline" href="javascript:void(0)">15</a>
 									</li>
 								</ul>
-								<a class="pagination-button pagination-forward text-subtitle focus-outline" href="javascript:void(0)">
-									Вперёд
-								</a>
+
+								<a class="pagination-button pagination-forward subtitle focus-outline" href="javascript:void(0)">Вперёд</a>
 							</div>
 						</section>
 					</div>
@@ -390,17 +384,17 @@
 				<div class="page-footer-center">
 					<ul class="footer-navigation reset-list">
 						<li class="footer-navigation-item">
-							<a class="footer-navigation-link page-footer-link text-subtitle focus-outline" href="javascript:void(0)">
+							<a class="footer-navigation-link page-footer-link subtitle focus-outline" href="javascript:void(0)">
 								Доставка
 							</a>
 						</li>
 						<li class="footer-navigation-item">
-							<a class="footer-navigation-link page-footer-link text-subtitle focus-outline" href="javascript:void(0)">
+							<a class="footer-navigation-link page-footer-link subtitle focus-outline" href="javascript:void(0)">
 								Гарантия
 							</a>
 						</li>
 						<li class="footer-navigation-item">
-							<a class="footer-navigation-link page-footer-link text-subtitle focus-outline" href="javascript:void(0)">
+							<a class="footer-navigation-link page-footer-link subtitle focus-outline" href="javascript:void(0)">
 								Контакты
 							</a>
 						</li>
