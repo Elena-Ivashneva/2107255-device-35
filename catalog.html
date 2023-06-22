@@ -163,22 +163,20 @@
 								<div class="filter-range">
 									<div class="range-scale">
 										<div class="range-bar">
-											<div class="range-price range-price-min">
+											<div class="range-control range-control-min">
 												<button class="range-toggle normalize-button focus-outline" type="button">
-													<span class="visually-hidden">Изменить минимальную стоимость</span>
+													<span class="visually-hidden">Минимальная стоимость</span>
 												</button>
-												<label>
-													<span class="visually-hidden">Ввести минимальную стоимость</span>
-													<input class="range-field normalize-input focus-outline" type="text" name="min-price" placeholder="от 0">
+												<label class="range-field">
+													от <input class="range-input normalize-input focus-outline" type="number" name="filter-min-price" value="0" min="0">
 												</label>
 											</div>
-											<div class="range-price range-price-max">
+											<div class="range-control range-control-max">
 												<button class="range-toggle normalize-button focus-outline" type="button">
-													<span class="visually-hidden">Изменить максимальную стоимость</span>
+													<span class="visually-hidden">Максимальная стоимость</span>
 												</button>
-												<label>
-													<span class="visually-hidden">Ввести максимальную стоимость</span>
-													<input class="range-field normalize-input focus-outline" type="text" name="max-price" placeholder="до 5000">
+												<label class="range-field">
+													до <input class="range-input normalize-input focus-outline" type="number" name="filter-max-price" value="5000" min="0">
 												</label>
 											</div>
 										</div>
@@ -192,37 +190,37 @@
 								<ul class="filter-list text-small reset-list">
 									<li class="filter-item filter-checkbox">
 										<label class="filter-control">
-											<input class="control-input control-checkbox visually-hidden" type="checkbox" name="color" value="black" checked>
-											<span class="control-mark checkbox-mark flex-center"></span>
-											<span class="control-label">Черный</span>
+											<input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="filter-color" value="black" checked>
+											<span class="filter-mark filter-mark-checkbox flex-center"></span>
+											<span class="filter-label">Черный</span>
 										</label>
 									</li>
 									<li class="filter-item filter-checkbox">
 										<label class="filter-control">
-											<input class="control-input control-checkbox visually-hidden" type="checkbox" name="color" value="white" checked>
-											<span class="control-mark checkbox-mark flex-center"></span>
-											<span class="control-label">Белый</span>
+											<input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="filter-color" value="white" checked>
+											<span class="filter-mark filter-mark-checkbox flex-center"></span>
+											<span class="filter-label">Белый</span>
 										</label>
 									</li>
 									<li class="filter-item filter-checkbox">
 										<label class="filter-control">
-											<input class="control-input control-checkbox visually-hidden" type="checkbox" name="color" value="blue">
-											<span class="control-mark checkbox-mark flex-center"></span>
-											<span class="control-label">Синий</span>
+											<input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="filter-color" value="blue">
+											<span class="filter-mark filter-mark-checkbox flex-center"></span>
+											<span class="filter-label">Синий</span>
 										</label>
 									</li>
 									<li class="filter-item filter-checkbox">
 										<label class="filter-control">
-											<input class="control-input control-checkbox visually-hidden" type="checkbox" name="color" value="red">
-											<span class="control-mark checkbox-mark flex-center"></span>
-											<span class="control-label">Красный</span>
+											<input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="filter-color" value="red">
+											<span class="filter-mark filter-mark-checkbox flex-center"></span>
+											<span class="filter-label">Красный</span>
 										</label>
 									</li>
 									<li class="filter-item filter-checkbox">
 										<label class="filter-control">
-											<input class="control-input control-checkbox visually-hidden" type="checkbox" name="color" value="pink">
-											<span class="control-mark checkbox-mark flex-center"></span>
-											<span class="control-label">Розовый</span>
+											<input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="filter-color" value="pink">
+											<span class="filter-mark filter-mark-checkbox flex-center"></span>
+											<span class="filter-label">Розовый</span>
 										</label>
 									</li>
 								</ul>
@@ -234,23 +232,23 @@
 								<ul class="filter-list text-small reset-list">
 									<li class="filter-item filter-radio">
 										<label class="filter-control">
-											<input class="control-input control-radio visually-hidden" type="radio" name="bluetooth" value="yes" checked>
-											<span class="control-mark radio-mark flex-center"></span>
-											<span class="control-label">Есть</span>
+											<input class="filter-input filter-input-radio visually-hidden" type="radio" name="filter-bluetooth" value="yes" checked>
+											<span class="filter-mark filter-mark-radio flex-center"></span>
+											<span class="filter-label">Есть</span>
 										</label>
 									</li>
 									<li class="filter-item filter-radio">
 										<label class="filter-control">
-											<input class="control-input control-radio visually-hidden" type="radio" name="bluetooth" value="no">
-											<span class="control-mark radio-mark flex-center"></span>
-											<span class="control-label">Нет</span>
+											<input class="filter-input filter-input-radio visually-hidden" type="radio" name="filter-bluetooth" value="no">
+											<span class="filter-mark filter-mark-radio flex-center"></span>
+											<span class="filter-label">Нет</span>
 										</label>
 									</li>
 								</ul>
 							</fieldset>
 
 							<div class="button-yellow-wrapper">
-								<button class="filter-button button-yellow subtitle normalize-button" type="submit">Показать</button>
+								<button class="filter-button button-yellow subtitle" type="submit">Показать</button>
 							</div>
 						</form>
 					</section>
@@ -259,7 +257,7 @@
 						<section class="catalog-sorting">
 							<h3 class="catalog-sorting-title catalog-subtitle subtitle">Сортировка:</h3>
 
-							<select class="sorting-select interactive-element" name="catalog-sorting" aria-label="Сортировать">
+							<select class="sorting-select interactive-element" name="catalog-sorting" aria-label="Сортировка">
 								<option value="popular">Популярные</option>
 								<option value="new">Новинки</option>
 								<option value="price">По цене</option>
@@ -279,7 +277,7 @@
 						<section class="catalog-products">
 							<h3 class="visually-hidden">Товары</h3>
 
-							<!-- Для добавления метки «NEW» товару - добавить ему класс "product-new" -->
+							<!-- Для добавления метки «NEW» товару - ссылке добавить класс "product-new" -->
 
 							<ul class="catalog-product-cards reset-list">
 								<li class="product-card">

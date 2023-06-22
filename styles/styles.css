@@ -103,10 +103,9 @@ img {
 }
 
 .normalize-input {
+	margin: 0;
 	padding: 0;
-
 	font-family: inherit;
-
 	background-color: rgba(255, 255, 255, 0);
 	border: 0;
 }
@@ -1962,7 +1961,7 @@ img {
 	border-bottom: 2px solid #000000;
 }
 
-.range-price {
+.range-control {
 	position: absolute;
 	top: -8px;
 
@@ -1970,12 +1969,12 @@ img {
 	row-gap: 4px;
 }
 
-.range-price-min {
+.range-control-min {
 	left: 0;
 	transform: translateX(-50%);
 }
 
-.range-price-max {
+.range-control-max {
 	right: 0;
 	transform: translateX(50%);
 }
@@ -2017,7 +2016,7 @@ img {
 	opacity: 1;
 }
 
-.range-field {
+.range-input {
 	display: block;
 	width: 32px;
 	height: 18px;
@@ -2029,11 +2028,11 @@ img {
 	color: #000000;
 }
 
-.range-price-max .range-field {
+.range-control-max .range-input {
 	width: 72px;
 }
 
-.range-field::placeholder {
+.range-input::placeholder {
 	color: #000000;
 	opacity: 0.3;
 }
@@ -2059,7 +2058,7 @@ img {
 	vertical-align: top;
 }
 
-.control-mark {
+.filter-mark {
 	position: relative;
 
 	flex-shrink: 0;
@@ -2071,7 +2070,7 @@ img {
 	cursor: pointer;
 }
 
-.control-mark::after {
+.filter-mark::after {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -2084,19 +2083,19 @@ img {
 	content: "";
 }
 
-.control-input:checked + .control-mark::after {
+.filter-input:checked + .filter-mark::after {
 	border-color: #000000;
 }
 
-.checkbox-mark::after {
+.filter-mark-checkbox::after {
 	border-radius: 3px;
 }
 
-.radio-mark::after {
+.filter-mark-radio::after {
 	border-radius: 50%;
 }
 
-.control-checkbox:checked + .checkbox-mark::before {
+.filter-input-checkbox:checked + .filter-mark-checkbox::before {
 	width: 10px;
 	height: 10px;
 
@@ -2107,7 +2106,7 @@ img {
 	content: "";
 }
 
-.control-radio:checked + .radio-mark::before {
+.filter-input-radio:checked + .filter-mark-radio::before {
 	width: 8px;
 	height: 8px;
 
@@ -2119,7 +2118,7 @@ img {
 	content: "";
 }
 
-.control-label {
+.filter-label {
 	padding-left: 16px;
 
 	transition: opacity 50ms ease-out;
@@ -2127,30 +2126,30 @@ img {
 	cursor: pointer;
 }
 
-.filter-control:hover .control-mark,
-.filter-control:hover .control-label {
+.filter-control:hover .filter-mark,
+.filter-control:hover .filter-label {
 	opacity: 0.6;
 }
 
-.control-input:focus-visible + .control-mark {
+.filter-input:focus-visible + .filter-mark {
 	outline: 2px solid #af4fff;
 	outline-offset: 2px;
 }
 
 @supports not selector(:focus-visible) {
-	.control-input:focus + .control-mark {
+	.filter-input:focus + .filter-mark {
 		outline: 2px solid #af4fff;
 		outline-offset: 2px;
 	}
 }
 
-.filter-control:active .control-mark,
-.filter-control:active .control-label {
+.filter-control:active .filter-mark,
+.filter-control:active .filter-label {
 	opacity: 0.3;
 }
 
-.control-input:disabled + .control-mark,
-.control-input:disabled ~ .control-label {
+.filter-input:disabled + .filter-mark,
+.filter-input:disabled ~ .filter-label {
 	opacity: 0.1;
 
 	pointer-events: none;
