@@ -250,8 +250,7 @@ img {
 	}
 }
 
-
-/* --- Header and Footer --- */
+/* ===== Logo ===== */
 
 .logo {
 	display: block;
@@ -260,7 +259,7 @@ img {
 
 .logo-image {
 	display: block;
-
+	object-fit: fill;
 	transition: opacity 100ms ease-out;
 }
 
@@ -272,60 +271,57 @@ img {
 	opacity: 0.3;
 }
 
-
-/* --- Header --- */
+/* ===== Header ===== */
 
 .page-header {
-	background-color: #ffe17f;
-}
-
-.page-header-wrapper {
-	width: 1050px;
-	margin: -20px auto 0;
-	padding-left: 5px;
-}
-
-.page-header-inner {
-	margin-bottom: 20px;
+	padding: 20px 60px 0 60px;
+	background: linear-gradient(#ffffff 40px, #ffe17f 40px);
 }
 
 .page-header-logo {
 	margin-bottom: 30px;
 }
 
-/* Header User Menu */
+/* .page-header-wrapper {
+	width: 1050px;
+	padding-left: 5px;
+}
+
+.page-header-inner {
+	margin-bottom: 20px;
+} */
+
+/* === User Menu === */
 
 .user-menu {
 	display: grid;
-	grid-template-columns: 519px 233px 1fr;
-	column-gap: 24px;
+	grid-template-columns: 517px 1fr;
+	gap: 26px;
 	align-items: start;
 	margin-bottom: 30px;
 }
 
 .site-search-form {
 	display: flex;
-	justify-self: start;
 }
 
 .site-search-label {
 	width: 359px;
+	min-height: 40px;
 	margin-right: -2px;
 }
 
 .site-search-field {
-	width: 357px;
+	width: calc(100% - 2px);
 	height: 100%;
-	padding: 8px 22px 8px 46px;
-
+	margin: 0;
+	padding: 8px 18px 8px 46px;
 	font-family: inherit;
-
 	background: url("../icons/stack.svg#header-site-search") no-repeat 14px center / 16px 16px;
 	background-color: rgba(255, 255, 255, 0);
 	border: 2px solid #000000;
 	border-right: 0;
 	border-radius: 50px 0 0 50px;
-
 	appearance: textfield;
 }
 
@@ -339,7 +335,6 @@ img {
 .site-search-field::-webkit-search-results-button,
 .site-search-field::-webkit-search-results-decoration {
 	margin: 0;
-
 	appearance: none;
 }
 
@@ -349,7 +344,6 @@ img {
 
 .site-search-label:focus-within {
 	z-index: 1;
-
 	outline: 2px solid #af4fff;
 	outline-offset: 2px;
 }
@@ -360,13 +354,11 @@ img {
 
 .site-search-button {
 	position: relative;
-
+	flex-shrink: 0;
 	width: 160px;
-	padding: 8px 22px;
-
+	padding: 8px 18px;
 	border: 2px solid #000000;
 	border-radius: 0 50px 50px 0;
-
 	transition: 300ms ease-out;
 }
 
@@ -374,10 +366,8 @@ img {
 	position: absolute;
 	top: -2px;
 	left: -2px;
-
 	width: calc(100% + 4px);
 	height: calc(100% + 4px);
-
 	content: "";
 }
 
@@ -415,17 +405,23 @@ img {
 	pointer-events: none;
 }
 
+.user-navigation {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 5px;
+}
+
 .user-auth {
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
-	margin: 3px 0;
+	width: 231px;
+	margin-right: 26px;
 }
 
 .user-button {
 	display: flex;
-	padding: 2px 1px;
-
+	padding: 5px 0;
 	text-decoration: none;
 	color: #000000;
 }
@@ -433,20 +429,13 @@ img {
 .user-button::before {
 	flex-shrink: 0;
 	margin: 9px 12px 0 0;
-
 	background-repeat: no-repeat;
-
 	content: "";
-}
-
-.login-button {
-	padding-left: 0;
 }
 
 .login-button::before {
 	width: 15px;
 	height: 12px;
-
 	background-image: url("../icons/stack.svg#header-user-login");
 	background-size: 15px 12px;
 }
@@ -464,28 +453,8 @@ img {
 	color: rgba(0, 0, 0, 1);
 }
 
-.user-navigation {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin-right: 5px;
-}
-
-.user-navigation-item {
-	margin: 3px 18px 3px 0;
-}
-
-.user-navigation-item:nth-child(2n) {
-	margin-right: 0;
-}
-
-.user-navigation-compare {
-	margin-right: 0;
-}
-
-.compare-button,
-.cart-button {
-	padding: 2px 0;
+.compare-button {
+	margin-right: auto;
 }
 
 .compare-button::before {
@@ -496,7 +465,7 @@ img {
 	background-size: 10px 12px;
 }
 
-.user-navigation-cart {
+.user-cart {
 	position: relative;
 }
 
@@ -682,16 +651,15 @@ img {
 	pointer-events: none;
 }
 
-
-/* Header Navigation */
+/* === Main Navigation === */
 
 .main-navigation {
 	position: relative;
 	z-index: 2;
-
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 293px 1fr;
+	column-gap: 90px;
+	align-items: start;
 }
 
 .catalog-navigation:focus-within .catalog-toggle-icon::before {
@@ -704,27 +672,23 @@ img {
 
 .catalog-toggle {
 	display: flex;
-	max-width: 400px;
+	text-align: left;
 }
 
 .catalog-toggle-text {
-	margin-right: 17px;
+	width: 236px;
+	margin-right: 7px;
 	padding: 15px 0 14px;
-
-	text-align: left;
 }
 
 .catalog-toggle-icon {
 	position: relative;
-
 	align-self: center;
 	flex-shrink: 0;
 	width: 50px;
 	height: 50px;
-
 	border: 2px solid #000000;
 	border-radius: 50%;
-
 	opacity: 0.3;
 	transition: opacity 100ms ease-in;
 }
@@ -805,18 +769,15 @@ img {
 .site-navigation {
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 525px;
-}
-
-.site-navigation-item {
-	margin: 5px 0 5px 42px;
+	gap: 5px 45px;
+	justify-self: end;
+	margin-right: -3px;
 }
 
 .site-navigation-link {
 	position: relative;
-
 	display: block;
-	padding: 10px 0 9px 5px;
+	padding: 15px 0 14px;
 }
 
 .site-navigation-link.is-current::after {
