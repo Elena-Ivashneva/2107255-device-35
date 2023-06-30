@@ -134,18 +134,20 @@
 		<main class="main-index main-container">
 			<h1 class="visually-hidden">Интернет-магазин гаджетов «Девайс»</h1>
 
-			<section class="main-slider container page-section">
+			<section class="slider container section-gap">
 				<h2 class="visually-hidden">Лучшие предложения нашего интернет-магазина</h2>
 
 				<!-- Для переключения слайдов - слайду добавить класс "is-active" -->
 
 				<ul class="slider-cards reset-list">
 					<li class="slider-card is-active">
-						<img class="slider-image" src="./images/slider-quadcopter.png" width="560" height="560" alt="Квадрокоптер, стреляющий лазером.">
+						<div class="slider-image-wrapper flex-center">
+							<img class="slider-image" src="./images/slider-quadcopter.png" width="560" height="560" alt="Квадрокоптер, стреляющий лазером.">
+						</div>
 
-						<div class="slider-info">
+						<div class="slider-content">
 							<h3 class="slider-title main-title">Порхает как бабочка, жалит как пчела!</h3>
-							<p class="slider-description reset-paragraph">
+							<p class="slider-description">
 								Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
 							</p>
 							<div class="slider-link-wrapper button-yellow-wrapper">
@@ -165,11 +167,13 @@
 					</li>
 
 					<li class="slider-card">
-						<img class="slider-image" src="./images/slider-fitness-bracelet.png" width="560" height="560" alt="Мотивирующий фитнес-браслет.">
+						<div class="slider-image-wrapper flex-center">
+							<img class="slider-image" src="./images/slider-fitness-bracelet.png" width="560" height="560" alt="Мотивирующий фитнес-браслет.">
+						</div>
 
-						<div class="slider-info">
+						<div class="slider-content">
 							<h3 class="slider-title main-title">Худеем<br>правильно!</h3>
-							<p class="slider-description reset-paragraph">
+							<p class="slider-description">
 								Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
 							</p>
 							<div class="slider-link-wrapper button-yellow-wrapper">
@@ -185,17 +189,19 @@
 					</li>
 
 					<li class="slider-card">
-						<img class="slider-image" src="./images/slider-selfie-stick.png" width="560" height="560" alt="Самая длинная селфи-палка.">
+						<div class="slider-image-wrapper flex-center">
+							<img class="slider-image" src="./images/slider-selfie-stick.png" width="560" height="560" alt="Самая длинная селфи-палка.">
+						</div>
 
-						<div class="slider-info">
-							<h3 class="slider-title main-title">Делай селфи,<br>как Бен Стиллер! </h3>
-							<p class="slider-description reset-paragraph">
+						<div class="slider-content">
+							<h3 class="slider-title main-title">Делай селфи,<br>как Бен Стиллер!</h3>
+							<p class="slider-description">
 								Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
 							</p>
 							<div class="slider-link-wrapper button-yellow-wrapper">
 								<a class="slider-link button-yellow subtitle" href="javascript:void(0)">Подробнее</a>
 							</div>
-							<dl class="slider-features slider-features-big-gaps">
+							<dl class="slider-features slider-features-big-gap">
 								<div class="slider-feature">
 									<dt class="slider-feature-title">Длина палки</dt>
 									<dd class="slider-feature-description">8,5 м</dd>
@@ -222,7 +228,7 @@
 					</button>
 				</div>
 
-				<!-- Для переключения номеров слайдов - кнопке добавить класс "is-current" -->
+				<!-- Для переключения индикаторов и номеров слайдов - кнопке добавить класс "is-current" -->
 
 				<div class="slider-pagination">
 					<button class="slider-pagination-button is-current normalize-button focus-outline" type="button">
@@ -237,7 +243,7 @@
 				</div>
 			</section>
 
-			<section class="index-catalog container page-section">
+			<section class="index-catalog container section-gap">
 				<h2 class="visually-hidden">Каталог товаров</h2>
 
 				<ul class="index-catalog-cards reset-list">
@@ -274,7 +280,7 @@
 				</ul>
 			</section>
 
-			<section class="services page-section">
+			<section class="services section-gap">
 				<div class="services-wrapper container">
 					<h2 class="visually-hidden">Наши услуги</h2>
 
@@ -325,7 +331,7 @@
 				</div>
 			</section>
 
-			<section class="on-order container page-section">
+			<section class="on-order container section-gap">
 				<h2 class="visually-hidden">Доставка под заказ</h2>
 
 				<a class="on-order-button focus-outline" href="javascript:void(0)">
@@ -334,7 +340,7 @@
 				</a>
 			</section>
 
-			<div class="company-info container page-section">
+			<div class="company-info container section-gap">
 				<section class="about">
 					<h2 class="company-info-title main-title">О нас</h2>
 
@@ -396,7 +402,7 @@
 								<span class="visually-hidden">Введите ваш e-mail</span>
 								<input class="subscription-field normalize-input" type="email" name="subscription-email" placeholder="Ваш e-mail" required>
 							</label>
-							<button class="subscription-button subtitle normalize-button focus-outline" type="submit">
+							<button class="subscription-button button subtitle focus-outline" type="submit">
 								Подписаться
 							</button>
 						</form>
