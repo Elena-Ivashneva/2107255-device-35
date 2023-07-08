@@ -117,10 +117,10 @@ img {
 .button {
 	min-height: 57px;
 	margin: 0;
-	padding: 15px 32px 15px 36px;
-	font-family: inherit;
+	padding: 15px 21px 15px 25px;
+	text-align: center;
 	background-color: rgba(255, 255, 255, 0);
-	border: 0;
+	border: 3px solid rgba(255, 255, 255, 0);
 	cursor: pointer;
 }
 
@@ -130,7 +130,7 @@ img {
 }
 
 .button-yellow-wrapper {
-	display: inline-block;
+	display: inline-flex;
 }
 
 .button-yellow {
@@ -141,12 +141,12 @@ img {
 	align-items: center;
 	justify-content: center;
 	min-width: 210px;
-	max-width: 305px;
+	max-width: 310px;
 	min-height: 40px;
 	margin: 0;
 	padding: 10px 10px 9px 14px;
-	font-family: inherit;
 	text-align: center;
+	text-decoration: none;
 	background-color: rgba(255, 255, 255, 0);
 	border: 0;
 	cursor: pointer;
@@ -202,7 +202,6 @@ img {
 	line-height: 21px;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
-	text-decoration: none;
 	color: #000000;
 }
 
@@ -504,8 +503,11 @@ img {
 	min-height: 134px;
 
 	color: #ffffff;
-
 	background-color: #000000;
+}
+
+.user-cart:focus-within .cart-popover {
+	display: block;
 }
 
 .cart-popover::before {
@@ -520,10 +522,6 @@ img {
 	background: url("../icons/stack.svg#popover-triangle") no-repeat 0 0 / 14px 6px;
 
 	content: "";
-}
-
-.cart-item:focus-within .cart-popover {
-	display: block;
 }
 
 .cart-product-item {
@@ -654,16 +652,8 @@ img {
 	z-index: 2;
 	display: grid;
 	grid-template-columns: 293px 1fr;
-	column-gap: 90px;
+	column-gap: 95px;
 	align-items: start;
-}
-
-.catalog-navigation:focus-within .catalog-toggle-icon::before {
-	content: none;
-}
-
-.catalog-navigation:focus-within .catalog-navigation-list {
-	display: grid;
 }
 
 .catalog-toggle {
@@ -728,6 +718,14 @@ img {
 	background-color: #ffe17f;
 }
 
+.catalog-navigation:focus-within .catalog-navigation-list {
+	display: grid;
+}
+
+.catalog-navigation:focus-within .catalog-toggle-icon::before {
+	content: none;
+}
+
 .catalog-navigation-item:nth-child(6) {
 	grid-column: 1 / 2;
 }
@@ -764,7 +762,7 @@ img {
 .site-navigation {
 	display: flex;
 	flex-wrap: wrap;
-	column-gap: 45px;
+	column-gap: 45.5px;
 	justify-self: end;
 	margin-right: -3px;
 }
@@ -773,6 +771,8 @@ img {
 	position: relative;
 	display: block;
 	padding: 15px 0 14px;
+	text-decoration: none;
+	color: inherit;
 }
 
 .site-navigation-link.is-current::after {
@@ -1247,7 +1247,6 @@ img {
 	display: grid;
 	grid-template-rows: min-content;
 	text-decoration: none;
-	color: #000000;
 	transition: opacity 150ms ease-out;
 }
 
@@ -1459,25 +1458,20 @@ img {
 	background-image: url("../icons/stack.svg#services-credit");
 }
 
-/* On Order */
+/* === On Order === */
 
 .on-order-button {
 	display: grid;
 	grid-template-columns: 125px 1fr 125px;
 	min-height: 100px;
-
 	text-decoration: none;
 	color: #000000;
-
 	background-color: #f0f0f0;
-
 	transition: opacity 150ms ease-out;
 }
 
 .on-order-button-text {
-	grid-column: 2 / 3;
-	padding: 41px 57px 36px 61px;
-
+	padding: 41px 59px 36px 63px;
 	font-size: 20px;
 	line-height: 23px;
 	text-align: center;
@@ -1486,9 +1480,7 @@ img {
 .on-order-button::before {
 	background: url("../icons/stack.svg#on-order-delivery") no-repeat center / 47px 32px;
 	background-color: #ffe17f;
-
 	transition: background-color 150ms ease-out;
-
 	content: "";
 }
 
@@ -1497,22 +1489,19 @@ img {
 	justify-self: center;
 	width: 40px;
 	height: 40px;
-
 	background-color: rgba(220, 220, 220, 0.5);
 	border-radius: 50%;
-
 	content: "";
 }
 
 .on-order-button-icon::before {
 	width: 2px;
 	height: 12px;
-
-	background: url("../icons/stack.svg#on-order-info") no-repeat 0 0 / 2px 12px;
+	background-image: url("../icons/stack.svg#on-order-info");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	opacity: 0.3;
-
 	transition: opacity 150ms ease-out;
-
 	content: "";
 }
 
@@ -1530,8 +1519,7 @@ img {
 	opacity: 0.3;
 }
 
-
-/* Company Info */
+/* === Company Info === */
 
 .company-info {
 	display: grid;
@@ -1539,24 +1527,32 @@ img {
 	justify-content: space-between;
 }
 
-.company-info-title {
+.company-info-block {
 	position: relative;
-
-	margin-bottom: 48px;
-	padding-top: 47px;
+	padding: 47px 15px 0 0;
 }
 
-.company-info-title::before {
+.company-info-block::before {
 	position: absolute;
 	top: 0;
 	left: 0;
-
 	width: 84px;
 	height: 7px;
-
 	background-color: #000000;
-
 	content: "";
+}
+
+.about {
+	width: 515px;
+}
+
+.company-info-title {
+	margin-bottom: 48px;
+}
+
+.company-info-content {
+	display: grid;
+	row-gap: 30px;
 }
 
 .company-info-description {
@@ -1564,22 +1560,14 @@ img {
 	margin: 0;
 }
 
-.about {
-	width: 500px;
-}
-
-.contacts {
-	width: 520px;
-}
-
 .about-delivery-list {
-	width: 450px;
+	display: grid;
+	row-gap: 19px;
+	margin-left: 2px;
 }
 
 .about-delivery-item {
 	position: relative;
-
-	margin: 0 0 19px 2px;
 	padding-left: 34px;
 }
 
@@ -1587,29 +1575,27 @@ img {
 	position: absolute;
 	top: 6px;
 	left: 0;
-
 	width: 8px;
 	height: 8px;
-
 	background-color: #ffc700;
 	border-radius: 50%;
-
 	content: "";
 }
 
-.about-delivery-item:last-child {
-	margin-bottom: 0;
+.about-more-wrapper,
+.contacts-feedback-wrapper {
+	justify-self: start;
 }
 
 .about-more {
-	min-width: 258px;
+	min-width: 257.5px;
 }
 
 .company-info-subtitle {
 	margin: 0 0 15px;
-
 	font-weight: 700;
 	font-size: 24px;
+	line-height: 30px;
 }
 
 .contacts-address {
@@ -1617,8 +1603,7 @@ img {
 }
 
 .contacts-phone {
-	display: inline-block;
-
+	display: inline-flex;
 	color: inherit;
 }
 
@@ -1626,12 +1611,7 @@ img {
 	min-width: 247px;
 }
 
-.company-info-row-gap {
-	margin-bottom: 30px;
-}
-
-
-/* Subscription */
+/* === Subscription === */
 
 .subscription {
 	background-color: #f0f0f0;
@@ -1644,46 +1624,52 @@ img {
 	padding: 64px 0 56px;
 }
 
-.subscription-info-container {
+.subscription-info-wrapper {
 	display: grid;
 	grid-template-columns: 350px 1fr;
 	column-gap: 250px;
 	padding: 0 7px;
 }
 
-.subscription-description {
-	margin: 10px 0 0;
+.subscription-description-wrapper {
+	padding-top: 10px;
 }
 
-.subscription-form-container {
+.subscription-description {
+	margin: 0 0 18px;
+}
+
+.subscription-description:last-of-type {
+	margin-bottom: 0;
+}
+
+.subscription-form-wrapper {
 	display: grid;
-	grid-template-columns: 1fr 210px;
+	grid-template-columns: 810px 1fr;
 	column-gap: 138px;
-	align-items: center;
 	padding: 0 1px;
 }
 
 .subscription-form {
 	display: flex;
+	align-self: end;
 }
 
 .subscription-label {
+	display: flex;
 	flex-grow: 1;
 }
 
 .subscription-field {
-	width: 100%;
-	height: 100%;
+	flex-grow: 1;
 	padding: 13px 16px 11px;
-
 	font: inherit;
-	color: #444444;
-
+	color: inherit;
 	border-bottom: 3px solid #c4c4c4;
 }
 
 .subscription-field::placeholder {
-	color: #444444;
+	color: inherit;
 	opacity: 0.5;
 }
 
@@ -1702,10 +1688,9 @@ img {
 }
 
 .subscription-button {
-	max-width: 350px;
-
-	border: 3px solid #c4c4c4;
-
+	min-width: 253px;
+	max-width: 333px;
+	border-color: #c4c4c4;
 	transition: color 100ms ease-out, background-color 100ms ease-out, border-color 100ms ease-out;
 }
 
@@ -1725,6 +1710,7 @@ img {
 
 .subscription-remark {
 	display: flex;
+	align-self: center;
 	justify-self: end;
 }
 
@@ -1733,12 +1719,11 @@ img {
 	width: 16px;
 	height: 16px;
 	margin: 7px 16px 0 0;
-
-	background: url("../icons/stack.svg#subscription-tick") no-repeat center / contain;
-
+	background-image: url("../icons/stack.svg#subscription-tick");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	content: "";
 }
-
 
 /* --- Main Inner --- */
 
