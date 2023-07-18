@@ -110,7 +110,8 @@ img {
 .normalize-input {
 	margin: 0;
 	padding: 0;
-	font-family: inherit;
+	font: inherit;
+	color: inherit;
 	background-color: rgba(255, 255, 255, 0);
 	border: 0;
 }
@@ -138,11 +139,9 @@ img {
 	position: relative;
 	left: 2.5%;
 	z-index: 1;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
+	display: block;
 	min-width: 210px;
-	max-width: 305px;
+	max-width: 310px;
 	min-height: 40px;
 	margin: 0;
 	padding: 10px 10px 9px 14px;
@@ -678,7 +677,7 @@ img {
 	z-index: 2;
 	display: grid;
 	grid-template-columns: 293px 1fr;
-	column-gap: 92px;
+	column-gap: 88px;
 	align-items: start;
 }
 
@@ -1680,57 +1679,51 @@ img {
 	content: "";
 }
 
-/* --- Main Inner --- */
+/* ===== Main Inner ===== */
 
-/* --- Inner Header --- */
+/* === Inner Header === */
 
 .inner-header {
-	padding: 36px 40px 24px 60px;
+	padding: 35px 60px 34px;
 }
 
 .inner-title {
-	margin-bottom: 15px;
+	margin-bottom: 16px;
 }
 
 .breadcrumbs {
 	display: flex;
 	flex-wrap: wrap;
+	gap: 14px 16px;
 }
 
 .breadcrumbs-item {
 	display: flex;
-	align-items: center;
-	margin: 0 17px 10px 0;
+	gap: 17px;
 }
 
-.breadcrumbs-item:last-child {
-	margin-right: 0;
-}
-
-.breadcrumbs-item::before {
+.breadcrumbs-item::after {
+	align-self: center;
 	width: 4px;
 	height: 8px;
-	margin-right: 16px;
-
-	background: url("../icons/stack.svg#breadcrumbs-divider") no-repeat center / contain;
+	background-image: url("../icons/stack.svg#breadcrumbs-divider");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	opacity: 0.2;
-
 	content: "";
 }
 
-.breadcrumbs-item:first-child::before {
+.breadcrumbs-item:last-child::after {
 	content: none;
 }
 
 .breadcrumbs-link {
 	text-decoration: none;
-	color: #000000;
-
+	color: inherit;
 	transition: opacity 150ms ease-out;
 }
 
-
-/* --- Catalog --- */
+/* === Catalog === */
 
 .catalog {
 	background-color: #f0f0f0;
@@ -1751,41 +1744,36 @@ img {
 	flex-direction: column;
 }
 
-
-/* --- Catalog Filter --- */
+/* === Catalog Filter === */
 
 .catalog-filter {
 	padding: 25px 40px 64px 60px;
 }
 
 .catalog-filter-title {
-	margin: 0 20px 60px 0;
+	margin-bottom: 60px;
 }
 
 .filter-group {
 	margin: 0 20px 35px 0;
 	padding: 0;
-
 	border: 0;
 }
 
-.filter-title {
+.filter-group-title {
 	position: relative;
-
 	width: 100%;
 	margin-bottom: 20px;
-	padding: 12px 0 0 0;
+	padding: 12px 0 0;
+	border: 0;
 }
 
-.filter-title::before {
+.filter-group-title::before {
 	position: absolute;
-	bottom: 100%;
-	left: 0;
-
+	top: 0;
+	transform: translateY(-100%);
 	width: 100%;
-
-	border-bottom: 2px solid #000000;
-
+	border-top: 2px solid #000000;
 	content: "";
 }
 
@@ -1798,39 +1786,31 @@ img {
 	max-width: 220px;
 }
 
-
-/* Range Slider */
-
-.filter-range-title {
-	margin-bottom: 28px;
-}
+/* Filter Range */
 
 .filter-range {
-	min-height: 35px;
+	min-height: 43px;
+	padding-top: 8px;
 }
 
 .range-scale {
 	position: relative;
-
 	border-bottom: 2px solid #dcdcdc;
 }
 
 .range-bar {
 	position: absolute;
-	top: 0;
 	left: 0;
-
 	width: 119px;
-
 	border-bottom: 2px solid #000000;
 }
 
 .range-control {
 	position: absolute;
 	top: -8px;
-
-	display: grid;
-	row-gap: 4px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .range-control-min {
@@ -1845,11 +1825,9 @@ img {
 
 .range-toggle {
 	position: relative;
-
-	justify-self: center;
 	width: 18px;
 	height: 18px;
-
+	margin-bottom: 4px;
 	background-color: #f0f0f0;
 }
 
@@ -1857,17 +1835,12 @@ img {
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 1;
-
 	width: 100%;
 	height: 100%;
-
 	background-color: #ebebeb;
 	border: 2px solid #000000;
 	border-radius: 50%;
-
 	transition: 50ms ease-out;
-
 	content: "";
 }
 
@@ -1880,27 +1853,47 @@ img {
 	opacity: 1;
 }
 
-.range-input {
-	display: block;
-	width: 32px;
-	height: 18px;
-	padding: 2px 1px 0 2px;
-
+.range-field {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 83px;
 	font-size: 14px;
 	line-height: 20px;
 	text-align: center;
 	color: #000000;
 }
 
-.range-control-max .range-input {
-	width: 72px;
+.range-label {
+	position: absolute;
+	min-width: 32px;
+	opacity: 0.3;
+	cursor: pointer;
+}
+
+.range-input {
+	width: 100%;
+	height: 20px;
+	padding: 2px 2px 0;
+	text-align: center;
+	appearance: textfield;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+	margin: 0;
+	appearance: none;
 }
 
 .range-input::placeholder {
-	color: #000000;
-	opacity: 0.3;
+	opacity: 0;
 }
 
+.range-input:focus,
+.range-input:not(:placeholder-shown) {
+	z-index: 1;
+	background-color: #f0f0f0;
+}
 
 /* Сheckboxes and Radios */
 

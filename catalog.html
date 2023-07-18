@@ -87,7 +87,7 @@
 				</div>
 			</div>
 
-			<!-- Для выделения текущей страницы - ссылке добавить класс "is-current" и удалить класс "interactive-element" -->
+			<!-- Для выделения текущей страницы - <a> заменить на <span>, добавить класс "is-current" и удалить класс "interactive-element" -->
 
 			<nav class="main-navigation">
 				<div class="catalog-navigation">
@@ -136,6 +136,8 @@
 			<header class="inner-header container">
 				<h1 class="inner-title main-title">Моноподы для селфи</h1>
 
+				<!-- Для выделения текущей страницы - <a> заменить на <span> и удалить класс "interactive-element" -->
+
 				<ul class="breadcrumbs text-small reset-list">
 					<li class="breadcrumbs-item">
 						<a class="breadcrumbs-link interactive-element" href="./index.html">Главная</a>
@@ -158,7 +160,7 @@
 
 						<form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
 							<fieldset class="filter-group">
-								<legend class="filter-title filter-range-title text-bold">Стоимость</legend>
+								<legend class="filter-group-title text-bold">Стоимость</legend>
 
 								<div class="filter-range">
 									<div class="range-scale">
@@ -168,15 +170,18 @@
 													<span class="visually-hidden">Минимальная стоимость</span>
 												</button>
 												<label class="range-field">
-													от <input class="range-input normalize-input focus-outline" type="number" name="filter-min-price" value="0" min="0">
+													<input class="range-input normalize-input focus-outline" type="number" name="filter-min-price" min="0" placeholder="от 0">
+													<span class="range-label">от 0</span>
 												</label>
 											</div>
+
 											<div class="range-control range-control-max">
 												<button class="range-toggle normalize-button focus-outline" type="button">
 													<span class="visually-hidden">Максимальная стоимость</span>
 												</button>
 												<label class="range-field">
-													до <input class="range-input normalize-input focus-outline" type="number" name="filter-max-price" value="5000" min="0">
+													<input class="range-input normalize-input focus-outline" type="number" name="filter-max-price" min="0" placeholder="до 5000">
+													<span class="range-label">до 5000</span>
 												</label>
 											</div>
 										</div>
@@ -185,7 +190,7 @@
 							</fieldset>
 
 							<fieldset class="filter-group">
-								<legend class="filter-title text-bold">Цвет</legend>
+								<legend class="filter-group-title text-bold">Цвет</legend>
 
 								<ul class="filter-list text-small reset-list">
 									<li class="filter-item filter-checkbox">
@@ -227,7 +232,7 @@
 							</fieldset>
 
 							<fieldset class="filter-group">
-								<legend class="filter-title text-bold">Bluetooth</legend>
+								<legend class="filter-group-title text-bold">Bluetooth</legend>
 
 								<ul class="filter-list text-small reset-list">
 									<li class="filter-item filter-radio">
