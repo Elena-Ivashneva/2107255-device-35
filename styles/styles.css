@@ -1778,12 +1778,7 @@ img {
 }
 
 .filter-button {
-	width: 210px;
-}
-
-.filter-button::before,
-.filter-button::after {
-	max-width: 220px;
+	max-width: 210px;
 }
 
 /* Filter Range */
@@ -1895,7 +1890,7 @@ img {
 	background-color: #f0f0f0;
 }
 
-/* Сheckboxes and Radios */
+/* Filter Checkboxes and Radios */
 
 .filter-checkbox {
 	margin-bottom: 17px;
@@ -1911,32 +1906,26 @@ img {
 
 .filter-control {
 	display: inline-flex;
-
 	vertical-align: top;
+	cursor: pointer;
 }
 
 .filter-mark {
 	position: relative;
-
 	flex-shrink: 0;
 	width: 20px;
 	height: 20px;
-
+	margin-right: 16px;
 	transition: opacity 50ms ease-out;
-
-	cursor: pointer;
 }
 
 .filter-mark::after {
 	position: absolute;
 	top: 0;
 	left: 0;
-
 	width: 100%;
 	height: 100%;
-
 	border: 2px solid #cccccc;
-
 	content: "";
 }
 
@@ -1955,32 +1944,23 @@ img {
 .filter-input-checkbox:checked + .filter-mark-checkbox::before {
 	width: 10px;
 	height: 10px;
-
 	background: url("../icons/stack.svg#filter-tick");
 	background-repeat: no-repeat;
-	background-size: 10px 10px;
-
+	background-size: 100% 100%;
 	content: "";
 }
 
 .filter-input-radio:checked + .filter-mark-radio::before {
+	transform: translateX(0.5px);
 	width: 8px;
 	height: 8px;
-
 	background-color: #000000;
 	border-radius: 50%;
-
-	transform: translateX(0.5px);
-
 	content: "";
 }
 
 .filter-label {
-	padding-left: 16px;
-
 	transition: opacity 50ms ease-out;
-
-	cursor: pointer;
 }
 
 .filter-control:hover .filter-mark,
@@ -2008,12 +1988,10 @@ img {
 .filter-input:disabled + .filter-mark,
 .filter-input:disabled ~ .filter-label {
 	opacity: 0.1;
-
 	pointer-events: none;
 }
 
-
-/* --- Catalog Sorting --- */
+/* === Catalog Sorting === */
 
 .catalog-sorting {
 	display: flex;
@@ -2023,24 +2001,20 @@ img {
 }
 
 .catalog-sorting-title {
-	max-width: 270px;
-	margin-top: 5px;
+	max-width: 273px;
+	padding: 6px 0 4px;
 }
 
 .sorting-select {
 	min-width: 142px;
-	margin-right: 2px;
+	margin: 0 0 0 -2px;
 	padding: 0 32px 0 0;
-
 	font: inherit;
 	color: #000000;
-
-	background: url("../icons/stack.svg#sorting-select-icon") no-repeat right top / 30px 30px;
+	background: url("../icons/stack.svg#sorting-select") no-repeat right top / 30px 30px;
 	background-color: rgba(255, 255, 255, 0);
 	border: 0;
-
 	cursor: pointer;
-
 	appearance: none;
 }
 
@@ -2056,10 +2030,10 @@ img {
 .sorting-order-button::before {
 	width: 11px;
 	height: 10px;
-
-	background: url("../icons/stack.svg#sorting-order-icon") no-repeat;
+	background-image: url("../icons/stack.svg#sorting-order");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	opacity: 0.2;
-
 	content: "";
 }
 
@@ -2074,7 +2048,6 @@ img {
 .sorting-order-button:active::before {
 	opacity: 1;
 }
-
 
 /* --- Catalog Products --- */
 
