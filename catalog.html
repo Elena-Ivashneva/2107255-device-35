@@ -95,16 +95,13 @@
 							</li>
 						</ul>
 					</div>
-
-					<!-- Для выделения текущей страницы - <a> заменить на <span>, добавить класс "is-current" и удалить класс "interactive-element" -->
-
-					<nav class="main-navigation">
-						<div class="catalog-navigation">
-							<button class="catalog-toggle subtitle normalize-button focus-outline" type="button">
-								<span class="catalog-toggle-text">Каталог товаров</span>
-								<span class="catalog-toggle-icon flex-center"></span>
+					<!-- Для выделения текущей страницы - <a> заменить на <span>, добавить класс-модификатор и удалить класс "interactive-element" -->
+					<nav class="main-menu">
+						<div class="main-menu__catalog-nav catalog-nav">
+							<button class="catalog-nav__button subtitle focus-outline" type="button">
+								Каталог товаров
+								<span class="catalog-nav__button-icon"></span>
 							</button>
-
 							<ul class="catalog-navigation-list reset-list">
 								<li class="catalog-navigation-item">
 									<a class="catalog-navigation-link interactive-element" href="javascript:void(0)">Виртуальная реальность</a>
@@ -126,16 +123,21 @@
 								</li>
 							</ul>
 						</div>
-
-						<ul class="site-navigation subtitle reset-list">
-							<li class="site-navigation-item">
-								<a class="site-navigation-link interactive-element" href="javascript:void(0)">Доставка</a>
+						<ul class="main-menu__site-nav site-nav subtitle reset-list">
+							<li class="site-nav__item">
+								<a class="site-nav__link interactive-element" href="javascript:void(0)">
+									Доставка
+								</a>
 							</li>
-							<li class="site-navigation-item">
-								<a class="site-navigation-link interactive-element" href="javascript:void(0)">Гарантия</a>
+							<li class="site-nav__item">
+								<a class="site-nav__link interactive-element" href="javascript:void(0)">
+									Гарантия
+								</a>
 							</li>
-							<li class="site-navigation-item">
-								<a class="site-navigation-link interactive-element" href="javascript:void(0)">Контакты</a>
+							<li class="site-nav__item">
+								<a class="site-nav__link interactive-element" href="javascript:void(0)">
+									Контакты
+								</a>
 							</li>
 						</ul>
 					</nav>
